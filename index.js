@@ -32,3 +32,5 @@ for (const person of people) {
   const adultMessage = verifyAdulthood(person.name, person.age);
   console.log(adultMessage);
 }
+
+console.log(verifyAdulthood(fullName, personAge));
