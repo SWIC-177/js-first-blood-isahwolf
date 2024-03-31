@@ -27,10 +27,7 @@ function verifyAdulthood(personName, personAge) {
   return `You are not old enough to enter, ${personName}.`;
 }
 
-// TODO{isahwolf}: Avoid using `for`...`of` loop. It's highly inefficient, as per linter.
-for (const person of people) {
+people.forEach((person) => {
   const adultMessage = verifyAdulthood(person.name, person.age);
   console.log(adultMessage);
-}
-
-console.log(verifyAdulthood(fullName, personAge));
+});
