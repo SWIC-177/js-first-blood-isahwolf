@@ -1,33 +1,18 @@
-const people = [
-  {
-    name: "John",
-    age: 17,
+const person = {
+  name: "John Doe",
+  age: 23,
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    state: "NY",
+    zip: "10001",
   },
-  {
-    name: "Jane",
-    age: 20,
-  },
-  {
-    name: "Mary",
-    age: 25,
-  },
-  {
-    name: "Peter",
-    age: 30,
-  },
-  {
-    name: "Paul",
-    age: 35,
-  },
-];
+};
 
-function verifyAdulthood(personName, personAge) {
-  if (personAge >= 18) return `Welcome, ${personName}!`;
+// Create a new object with the same properties as the original object.
+const otherPerson = { ...person };
 
-  return `You are not old enough to enter, ${personName}.`;
-}
+otherPerson.name = "Jane Doe";
 
-people.forEach((person) => {
-  const adultMessage = verifyAdulthood(person.name, person.age);
-  console.log(adultMessage);
-});
+console.log(`Person's name is: ${person.name}`);
+console.log(`Other Person's name is: ${otherPerson.name}`);
